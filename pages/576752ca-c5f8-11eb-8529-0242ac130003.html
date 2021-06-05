@@ -1,0 +1,129 @@
+<html>
+    <header>
+        <script>
+            function onLoadFc(){
+                var w = window.innerWidth;
+                var h = window.innerHeight; 
+                var jokes = document.querySelectorAll(".darkJoke");
+                document.getElementById("imagee").style.height = h/4;
+                document.getElementById("imagee").style.width = h/4;
+                
+                for(var i=0;i<jokes.length;i++){
+                    jokes[i].style.height = h/4;
+                }
+            }
+        </script>
+        <style>
+            /* shadows-into-light-two-regular - latin */
+            @font-face {
+            font-family: 'Shadows Into Light Two';
+            font-style: normal;
+            font-weight: 400;
+            src: url('../fonts/shadows-into-light-two-v8-latin/shadows-into-light-two-v8-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('../fonts/shadows-into-light-two-v8-latin/shadows-into-light-two-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('../fonts/shadows-into-light-two-v8-latin/shadows-into-light-two-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('../fonts/shadows-into-light-two-v8-latin/shadows-into-light-two-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('../fonts/shadows-into-light-two-v8-latin/shadows-into-light-two-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('../fonts/shadows-into-light-two-v8-latin/shadows-into-light-two-v8-latin-regular.svg#ShadowsIntoLightTwo') format('svg'); /* Legacy iOS */
+            }
+            .darkJoke{
+                text-align: center;
+                vertical-align: middle;
+                font-family: Shadows Into Light Two;
+                font-size: 25px;
+                justify-content: center;
+                align-items: center;
+                /* border: 3px solid rgb(3, 161, 3); */
+                padding: 10px;
+                background-color: #e7faef;
+            }
+            #question{
+                position: relative;
+                top: 20%;
+                font-weight: bold;
+            }
+            #answer{
+                position: relative;
+                top: 20%;
+                color: crimson;
+            }
+            table.center{
+                margin-left: auto; 
+                margin-right: auto;
+            }
+
+        </style>
+    </header>
+    <body onload="onLoadFc()">
+        <div style="max-width: fit-content;overflow-x: auto;">
+        <table class="center">
+            <tr>
+                <table>
+                    <tr>
+                        <td style="width: 50%;">
+                            <div class="darkJoke">
+                                <span id="question">If i had a dollar for every racist thing I’ve ever said......</span>
+                                <br>
+                                <span id="answer">Some black motherfucker would probably rob me.</span>
+                            </div>
+                        </td>
+                        <!-- <td></td> -->
+                        <td style="width: 50%;">
+                            <div class="darkJoke">
+                                <span id="question">What's the difference between XX chromosome & XY chromosome?</span>
+                                <br>
+                                <span id="answer">One is a dishwasher the other isn't.</span>
+                            </div>
+                        </td>
+                </tr>
+                </table>
+            </tr>
+            <tr>
+                <table>
+                    <tr>
+                        <td style="width: 33.3%;">
+                            <div class="darkJoke">
+                                <span id="question">What do you call a bunch of depressed kids?</span>
+                                <br>
+                                <span id="answer">The Suicide Squad.</span>
+                            </div>
+                        </td>
+                        <td style="width: 33.3%;text-align: center;">
+                            <img id="imagee" src="../images/hyoung.jpg">
+                        </td>
+                        <td style="width: 33.3%;">
+                            <div class="darkJoke">
+                                <span id="question">I was gonna make a GAY JOKE</span>
+                                <br>
+                                <span id="answer">BUTT FUCK IT</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <tr>
+                <table>
+                    <tr>
+                        <td style="width: 50%;">
+                            <div class="darkJoke">
+                                <span id="question">You know the best thing about killing a hooker?</span>
+                                <br>
+                                <span id="answer">Not only do you get your money back, but, the second hour is free.</span>
+                            </div>
+                        </td>
+                        <!-- <td></td> -->
+                        <td style="width: 50%;">
+                            <div class="darkJoke">
+                                <span id="question">If you're thinking about killing yourself, just remember</span>
+                                <br>
+                                <span id="answer">To become an organ donor first you selfish piece of shit.</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+        </table>       
+    </div>
+    </body>
+</html>

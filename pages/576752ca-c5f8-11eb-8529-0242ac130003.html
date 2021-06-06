@@ -52,11 +52,12 @@
                 margin-left: auto; 
                 margin-right: auto;
             }
+            
 
         </style>
     </header>
     <body onload="onLoadFc()">
-        <div style="max-width: fit-content;overflow-x: auto;">
+        <div class="jokes-div" style="max-width: fit-content;overflow-x: auto;">
         <table class="center">
             <tr>
                 <table>
@@ -90,7 +91,11 @@
                             </div>
                         </td>
                         <td style="width: 33.3%;text-align: center;">
-                            <img id="imagee" src="../images/hyoung.jpg">
+                            <span style="color: rgb(223, 41, 41);">Aur Kya chahiye? Mu me lega?</span>
+                            <br>
+                            <img id="imagee" src="../images/hyoung.jpg" onclick="showCollage()">
+                            <br> 
+                            <span style="font-size: 15px;">accha chal pic pe click kar</span>
                         </td>
                         <td style="width: 33.3%;">
                             <div class="darkJoke">
@@ -125,5 +130,16 @@
             </tr>
         </table>       
     </div>
+    <div class="collage-div" >
+        <img src="../images/collage.png"style="width:100%;height: auto;">
+       </div>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".collage-div").hide();
+        $("#imagee").click(()=>{
+            $(".jokes-div").fadeOut();
+            $(".collage-div").fadeIn();
+        })
+    </script>
 </html>

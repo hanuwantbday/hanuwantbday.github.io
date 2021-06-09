@@ -62,21 +62,22 @@
             <tr>
                 <table>
                     <tr>
-                        <td style="width: 50%;">
+                        <!-- <td style="width: 100%;"> -->
+                        <!-- <td style="width: 50%;">
                             <div class="darkJoke">
-                                <span id="question">If i had a dollar for every racist thing I’ve ever said......</span>
+                                <span id="question">If i had a dollar for every racist thing I’ve ever said...</span>
                                 <br>
                                 <span id="answer">Some black motherfucker would probably rob me.</span>
                             </div>
                         </td>
-                        <!-- <td></td> -->
-                        <td style="width: 50%;">
+
+                        <td style="width: 50%;"> -->
                             <div class="darkJoke">
-                                <span id="question">What's the difference between XX chromosome & XY chromosome?</span>
+                                <span id="question">Why does Hanuwant never have threesome?</span>
                                 <br>
-                                <span id="answer">One is a dishwasher the other isn't.</span>
+                                <span id="answer">If he were to disappoint two people at once, it would be his parents.</span>
                             </div>
-                        </td>
+                        <!-- </td> -->
                 </tr>
                 </table>
             </tr>
@@ -91,11 +92,11 @@
                             </div>
                         </td>
                         <td style="width: 33.3%;text-align: center;">
-                            <span style="color: rgb(223, 41, 41);">Aur Kya chahiye? Mu me lega?</span>
+                            <span style="color: rgb(223, 41, 41);font-family: Fantasy;">Aur Kya chahiye? Mu me lega?</span>
                             <br>
                             <img id="imagee" src="../images/hyoung.jpg" onclick="showCollage()">
                             <br> 
-                            <span style="font-size: 15px;">accha chal pic pe click kar</span>
+                            <span style="font-size: 15px; font-family: Fantasy;">accha chal pic pe click kar</span>
                         </td>
                         <td style="width: 33.3%;">
                             <div class="darkJoke">
@@ -130,7 +131,7 @@
             </tr>
         </table>       
     </div>
-    <div class="collage-div" >
+    <div class="collage-div">
         <img src="../images/collage.png"style="width:100%;height: auto;">
        </div>
     </body>
@@ -138,8 +139,12 @@
     <script>
         $(".collage-div").hide();
         $("#imagee").click(()=>{
-            $(".jokes-div").fadeOut();
-            $(".collage-div").fadeIn();
-        })
+            $(".jokes-div").fadeOut(()=>{
+                $(".collage-div").fadeIn(()=>{
+                setTimeout(2000);
+            });
+            });
+            
+        });
     </script>
 </html>

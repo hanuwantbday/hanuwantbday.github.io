@@ -52,7 +52,9 @@
                 margin-left: auto; 
                 margin-right: auto;
             }
-            
+            div.hidden{
+                display: none;
+            }
 
         </style>
     </header>
@@ -72,7 +74,7 @@
                         </td>
 
                         <td style="width: 50%;"> -->
-                            <div class="darkJoke">
+                            <div class="darkJoke hidden">
                                 <span id="question">Why does Hanuwant never have threesome?</span>
                                 <br>
                                 <span id="answer">If he were to disappoint two people at once, it would be his parents.</span>
@@ -85,21 +87,23 @@
                 <table>
                     <tr>
                         <td style="width: 33.3%;">
-                            <div class="darkJoke">
+                            <div class="darkJoke hidden">
                                 <span id="question">What do you call a bunch of depressed kids?</span>
                                 <br>
                                 <span id="answer">The Suicide Squad.</span>
                             </div>
                         </td>
                         <td style="width: 33.3%;text-align: center;">
+                            <div class="hidden">
                             <span style="color: rgb(223, 41, 41);font-family: Fantasy;">Aur Kya chahiye? Mu me lega?</span>
                             <br>
                             <img id="imagee" src="../images/hyoung.jpg" onclick="showCollage()">
                             <br> 
-                            <span style="font-size: 15px; font-family: Fantasy;">accha chal pic pe click kar</span>
+                            <span style="font-size: 12px; font-family: Fantasy;">accha chal pic pe click kar</span>
+                            </div>
                         </td>
                         <td style="width: 33.3%;">
-                            <div class="darkJoke">
+                            <div class="darkJoke hidden">
                                 <span id="question">I was gonna make a GAY JOKE</span>
                                 <br>
                                 <span id="answer">BUTT FUCK IT</span>
@@ -112,7 +116,7 @@
                 <table>
                     <tr>
                         <td style="width: 50%;">
-                            <div class="darkJoke">
+                            <div class="darkJoke hidden">
                                 <span id="question">You know the best thing about killing a hooker?</span>
                                 <br>
                                 <span id="answer">Not only do you get your money back, but, the second hour is free.</span>
@@ -120,7 +124,7 @@
                         </td>
                         <!-- <td></td> -->
                         <td style="width: 50%;">
-                            <div class="darkJoke">
+                            <div class="darkJoke hidden">
                                 <span id="question">If you're thinking about killing yourself, just remember</span>
                                 <br>
                                 <span id="answer">To become an organ donor first you selfish piece of shit.</span>
@@ -137,11 +141,23 @@
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(".collage-div").hide();
+        $(document).ready(function () {
+            $(".collage-div").hide();
+            $(".hidden").fadeIn().removeClass('hidden');
+        });
+        
         $("#imagee").click(()=>{
             $(".jokes-div").fadeOut(()=>{
                 $(".collage-div").fadeIn(()=>{
                 setTimeout(2000);
+            });
+            });
+            
+        });
+        $(".collage-div").click(()=>{
+            $(".collage-div").fadeOut(()=>{
+                $(".jokes-div").fadeIn(()=>{
+                //setTimeout(2000);
             });
             });
             

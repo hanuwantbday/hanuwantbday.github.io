@@ -43,11 +43,13 @@
                 text-align: center;
                 vertical-align: middle;
                 font-family: Shadows Into Light Two;
-                font-size: 25px;
+                font-size: 2em;
                 justify-content: center;
                 align-items: center;
                 /* border: 3px solid rgb(3, 161, 3); */
-                padding: 10px;
+                padding-left: 3vw;
+                padding-right: 3vw;
+
                 background-color: #e7faef;
             }
             #question{
@@ -67,6 +69,22 @@
             div.hidden{
                 display: none;
             }
+            .contentRow{
+                width: 100vw;
+                height: 20vh;
+            }
+            .smallText{
+                font-size: 2em;
+            }
+            .imgDiv{
+                margin-top: 15vh;
+                width: 100vw;
+                height: 50vh;
+            }
+            .imgPic{
+                width: 100%;
+                height: 100%;
+            }
 
         </style>
     </header>
@@ -75,7 +93,7 @@
         <table class="center">
             <tr>
                 <table>
-                    <tr>
+                    <tr class ="contentRow">
                         <!-- <td style="width: 100%;"> -->
                         <!-- <td style="width: 50%;">
                             <div class="darkJoke">
@@ -86,18 +104,27 @@
                         </td>
 
                         <td style="width: 50%;"> -->
+                        <td>
                             <div class="darkJoke hidden">
                                 <span id="question">Why does Hanuwant never have threesome?</span>
                                 <br>
                                 <span id="answer">If he were to disappoint two people at once, it would be his parents.</span>
                             </div>
+                        </td>
+                        <td>
+                            <div class="darkJoke hidden">
+                                <span id="question">Whom does Hanuwant aspire?</span>
+                                <br>
+                                <span id="answer">He is a great youtuber and a model, Shreyansh Deep</span>
+                            </div>
+                        </td>
                         <!-- </td> -->
                 </tr>
                 </table>
             </tr>
             <tr>
                 <table>
-                    <tr>
+                    <tr class ="contentRow">
                         <td style="width: 33.3%;">
                             <div class="darkJoke hidden">
                                 <span id="question">What do you call a bunch of depressed kids?</span>
@@ -107,11 +134,11 @@
                         </td>
                         <td style="width: 33.3%;text-align: center;">
                             <div class="hidden">
-                            <span style="color: rgb(223, 41, 41);font-family: Fantasy;">Aur Kya chahiye? Mu me lega?</span>
+                            <span class="smallText" style="color: rgb(223, 41, 41);font-family: Fantasy;">Aur Kya chahiye? Mu me lega?</span>
                             <br>
                             <img id="imagee" src="../images/hyoung.jpg" onclick="showCollage()">
                             <br> 
-                            <span style="font-size: 12px; font-family: Fantasy;">accha chal pic pe click kar</span>
+                            <span class = "smallText" style="font-size: 12px; font-family: Fantasy;">accha chal pic pe click kar</span>
                             </div>
                         </td>
                         <td style="width: 33.3%;">
@@ -126,7 +153,7 @@
             </tr>
             <tr>
                 <table>
-                    <tr>
+                    <tr class ="contentRow">
                         <td style="width: 50%;">
                             <div class="darkJoke hidden">
                                 <span id="question">You know the best thing about killing a hooker?</span>
@@ -145,12 +172,41 @@
                     </tr>
                 </table>
             </tr>
+            <tr>
+                <table>
+                    <tr class ="contentRow">
+                        <!-- <td style="width: 100%;"> -->
+                        <!-- <td style="width: 50%;">
+                            <div class="darkJoke">
+                                <span id="question">If i had a dollar for every racist thing I’ve ever said...</span>
+                                <br>
+                                <span id="answer">Some black motherfucker would probably rob me.</span>
+                            </div>
+                        </td>
+
+                        <td style="width: 50%;"> -->
+                        <div class="darkJoke hidden">
+                            <span id="question">A secret that you don't want to know?</span>
+                            <br>
+                            <span id="answer">Naruto chutiya show hai</span>
+                        </div>
+                        <!-- </td> -->
+                    </tr>
+                </table>
+            </tr>
         </table>       
     </div>
     <div class="collage-div">
-        <img src="../images/collage.png"style="width:100%;height: auto;">
-        <div style="text-align: center;font-family: Pacifico;">
+        <div class="imgDivHeader">
+        <div style="text-align: center;font-family: sans-serif; font-size: 2vw">
+            Ye le BKL, Aish kar!</span>
+        </div>
+        </div>
+        <div class="imgDiv">
+        <img class = "imgPic" src="../images/collage.png"style="width:100%;height: auto;">
+        <div style="text-align: center;font-family: Pacifico; font-size: 2vw">
             Itna hi hai.. ab Roole thoda <span style="color: rgb(235, 91, 38);">Emotionless Bitch!</span>
+        </div>
         </div>
     </div>
     </body>

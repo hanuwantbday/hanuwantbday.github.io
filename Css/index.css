@@ -1,0 +1,37 @@
+/* Just for the Look  */
+body {
+    background: #149cbe;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 60px;
+}
+/* Wrapper to Center the Typewriter */
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.centeredBox {
+    width: 100%;
+    text-align: center;
+}
+
+.startButtonDiv {
+    margin-top: 10vh;
+}
+
+.startButton{
+    height: 5vh;
+    width: 20vw;
+    font-size: 2vw;
+    background: #c0392b;
+    color: white;
+}
+.cursor {
+    border-left: 4px solid white;
+}

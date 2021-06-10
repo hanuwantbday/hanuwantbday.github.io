@@ -5,8 +5,8 @@
                 var w = window.innerWidth;
                 var h = window.innerHeight; 
                 var jokes = document.querySelectorAll(".darkJoke");
-                document.getElementById("imagee").style.height = h/4;
-                document.getElementById("imagee").style.width = h/4;
+                document.getElementById("imagee").style.height = h/4.5;
+                document.getElementById("imagee").style.width = h/4.5;
                 
                 for(var i=0;i<jokes.length;i++){
                     jokes[i].style.height = h/4;
@@ -43,14 +43,49 @@
                 text-align: center;
                 vertical-align: middle;
                 font-family: Shadows Into Light Two;
-                font-size: 2em;
+                font-size: 20px;
                 justify-content: center;
                 align-items: center;
                 /* border: 3px solid rgb(3, 161, 3); */
                 padding-left: 3vw;
                 padding-right: 3vw;
-
+                /* overflow:scroll; */
+                
                 background-color: #e7faef;
+            }
+            @media screen and (min-width: 601px) {
+                div.darkJoke {
+                    font-size: 20px;
+                }
+                .smallText{
+                    font-size: 15px;
+                }
+                .a{
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+            @media screen and (max-width: 600px) {
+                div.darkJoke {
+                    font-size: 15px;
+                }
+                .smallText{
+                    font-size: 15px;
+                }
+                .a{
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+            @media screen and (min-width: 800px) {
+                div.darkJoke {
+                    font-size: 27px;
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                }
+                .a{
+                    font-size: 35px;
+                }
             }
             #question{
                 position: relative;
@@ -74,7 +109,7 @@
                 height: 20vh;
             }
             .smallText{
-                font-size: 2em;
+                font-size: 20px;
             }
             .imgDiv{
                 margin-top: 15vh;
@@ -104,14 +139,14 @@
                         </td>
 
                         <td style="width: 50%;"> -->
-                        <td>
+                        <td style="width: 50%;">
                             <div class="darkJoke hidden">
                                 <span id="question">Why does Hanuwant never have threesome?</span>
                                 <br>
                                 <span id="answer">If he were to disappoint two people at once, it would be his parents.</span>
                             </div>
                         </td>
-                        <td>
+                        <td style="width: 50%;">
                             <div class="darkJoke hidden">
                                 <span id="question">Whom does Hanuwant aspire?</span>
                                 <br>

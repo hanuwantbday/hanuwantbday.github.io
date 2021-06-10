@@ -2,32 +2,118 @@
 <html>
     <header>
         <title>
-            Only Fans - Hanuwant
+            Bhujo To Jaane
         </title>
-        <style>
-            body{
-                margin: auto;
-                text-align: center;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link href="Css/index.css" rel="stylesheet">
+
     </header>
-    
-    <body onload="myFunction()">
-        <script>
-            function myFunction() {
-              var key = prompt("key daal Bhadwe:");
-              if (key == "hello" || key == "Gaand mai daal le trimax") {
-                window.open("./pages/3c2970c4-c5f8-11eb-8529-0242ac130003.html",'_self' );
-              }else if(key == "hello2" || key=="ILikeWatchingHarryPotter"){
-                  window.open("./pages/576752ca-c5f8-11eb-8529-0242ac130003.html",'_self');
-              }
-              else{
-                  document.getElementById("warning").style.visibility = "visible";
-              }
+
+    <script>
+        const invalidKeyMessage = "ERROR: LOL! Enter a valid key !!";
+        const invalidSyntaxMessage = "ERROR: Make sure the key follows this structure <TaskNumber>:<YOUR_KEY>";
+        var errorMessage = "";
+        function validateUser() {
+            const headerMessage =
+               "Instructions: \n" +
+               ">> If you found the key for the first task, type in :- \n"+
+               "1:<YOUR_KEY> \n"+
+               ">> Else if you found it for the second task type in :- \n"+
+               "2:<YOUR_KEY> \n \n"+
+                errorMessage;
+
+            const key = prompt(headerMessage, "Enter the secret key");
+            const keyArr = key.split(":");
+            if(keyArr.length != 2){
+                errorMessage = invalidSyntaxMessage;
+                validateUser();
             }
-            </script>
-        <img src="./images/middle.jpg">
-        <br>
-        <span id="warning" style="visibility: hidden;color: red;">CODE DALNE KE LIYE REFRESH KAR BEWDE</span>
+            console.log(keyArr[1] == "Gaand mai daal le trimax", keyArr[1]);
+            if(keyArr[0] == "1" && keyArr[1] == "Gaand mai daal le trimax"){
+                window.open("./pages/3c2970c4-c5f8-11eb-8529-0242ac130003.html",'_self' );
+            } else if(keyArr[0] == "2" && keyArr[1] == "ILikeWatchingHarryPotter"){
+                window.open("./pages/576752ca-c5f8-11eb-8529-0242ac130003.html",'_self');
+            } else if(keyArr[1] == "HappyBirthday"){
+                window.open("./pages/familypage.html",'_self');
+            }
+            else{
+                errorMessage = invalidKeyMessage;
+                validateUser();
+            }
+
+        }
+    </script>
+    <script>
+        function typeWriterEffect() {
+            // The typewriter element
+            var typeWriterElement = document.getElementById('typewriter');
+
+            // The TextArray:
+            var textArray = ["Aur Bhai Birthday Boy !!", "Tayyar Ho Ye Adbhud Khel Khelne Ke Liye ?", "Let's Assume, Hoge Hi", "To Chaliye Phir Shuru Karte Hai!!"];
+
+            // You can also do this by transfering it through a data-attribute
+            // var textArray = typeWriterElement.getAttribute('data-array');
+
+
+            // function to generate the backspace effect
+            function delWriter(text, i, cb) {
+                if (i >= 0) {
+                    typeWriterElement.innerHTML = text.substring(0, i--);
+                    // generate a random Number to emulate backspace hitting.
+                    var rndBack = 10 + Math.random() * 100;
+                    setTimeout(function () {
+                        delWriter(text, i, cb);
+                    }, rndBack);
+                } else if (typeof cb == 'function') {
+                    setTimeout(cb, 500);
+                }
+            };
+
+            // function to generate the keyhitting effect
+            function typeWriter(text, i, cb) {
+                if (i < text.length + 1) {
+                    typeWriterElement.innerHTML = text.substring(0, i++);
+                    // generate a random Number to emulate Typing on the Keyboard.
+                    var rndTyping = 250 - Math.random() * 100;
+                    setTimeout(function () {
+                        typeWriter(text, i++, cb)
+                    }, rndTyping);
+                } else if (i === text.length + 1) {
+                    setTimeout(function () {
+                        delWriter(text, i, cb)
+                    }, 500);
+                }
+            };
+
+            // the main writer function
+            function StartWriter(i) {
+                if (typeof textArray[i] == "undefined") {
+                    setTimeout(function () {
+                        StartWriter(0)
+                    }, 500);
+                } else if (i < textArray[i].length + 1) {
+                    typeWriter(textArray[i], 0, function () {
+                        StartWriter(i + 1);
+                    });
+                }
+            };
+            // wait one second then start the typewriter
+            setTimeout(function () {
+                StartWriter(0);
+            }, 1000);
+        }
+
+    </script>
+    <body onload="typeWriterEffect()">
+    <div class="wrapper">
+        <div class="centeredBox">
+            <span id="typewriter" data-array=""></span>
+            <span class="cursor"></span>
+        </div>
+        <div class="startButtonDiv" >
+        <button class="startButton" onclick="validateUser()">Click Here!!</button>
+        </div>
+    </div>
+
     </body>
 </html>
